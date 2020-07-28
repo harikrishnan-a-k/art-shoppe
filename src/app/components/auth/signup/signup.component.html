@@ -1,0 +1,63 @@
+
+<div class="row justify-content-center ">
+  <div class="col-sm-6 mt-3 p-5">
+    <mat-card>
+      <mat-spinner *ngIf="isLoading"></mat-spinner>
+      <form (submit)="onSignup(signupForm)" #signupForm="ngForm" *ngIf="!isLoading">
+        <mat-card class="text-white bg-theme mb-5">Signup Form</mat-card>
+        <div>
+          <mat-form-field>
+            <input matInput name="email" ngModel type="email" placeholder="E-Mail" #emailInput="ngModel" required email>
+            <mat-error *ngIf="emailInput.invalid">Please enter a valid email.</mat-error>
+          </mat-form-field>
+
+        </div>
+        <div>
+          <mat-form-field>
+            <input type="password" name="password" ngModel matInput placeholder="Password" #passwordInput="ngModel" required>
+            <mat-error *ngIf="passwordInput.invalid">Please enter a valid password.</mat-error>
+          </mat-form-field>
+        </div>
+
+          <div>
+            <mat-form-field>
+              <input matInput type="text" name="name" placeholder="Your Name" ngModel #nameInput="ngModel" required >
+              <mat-error *ngIf="nameInput.invalid">Please enter Valid Name.</mat-error>
+            </mat-form-field>
+
+          </div>
+
+          <div>
+            <mat-form-field>
+              <textarea matInput rows="4" name="address" placeholder="Your Address"required ngModel #addressInput="ngModel"></textarea>
+              <mat-error *ngIf="addressInput.invalid">Please enter a Valid Address.</mat-error>
+            </mat-form-field>
+
+          </div>
+          <div>
+
+            <mat-form-field >
+              <mat-label>Type Of User</mat-label>
+              <select  name="userType" required ngModel matNativeControl #userTypeInput="ngModel">
+                <option label="--select something --"></option>
+                <option value="customer" >
+                  customer
+                </option>
+                <option value="artist" >
+                  artist
+                </option>
+              </select>
+              <mat-error *ngIf="userTypeInput.invalid">
+                This field is required
+              </mat-error>
+            </mat-form-field>
+
+          </div>
+
+
+        <button mat-raised-button color="accent" type="submit" *ngIf="!isLoading">Signup</button>
+      </form>
+    </mat-card>
+  </div>
+</div>
+

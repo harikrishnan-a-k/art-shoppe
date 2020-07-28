@@ -1,0 +1,6 @@
+.marginTop{
+  margin-top: 90px;
+}
+.minHeight{
+  min-height: calc(100vh - 114px);
+}

@@ -1,0 +1,15 @@
+mat-spinner {
+  margin: auto;
+}
+.container-fluid{
+  background-color: rgb(191, 156, 211);
+  min-height: 90vh;
+}
+
+.bg-theme{
+  color: white;
+  background: #673ab7;
+}
+mat-form-field {
+  width: 100%;
+}

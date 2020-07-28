@@ -1,0 +1,14 @@
+.carousel-item img{
+  height:400px;
+}
+
+@media(max-width:576px){
+  .carousel-item img{
+      height:300px;
+  }
+
+}
+
+.swiper-slide img{
+  height: 300px;
+}

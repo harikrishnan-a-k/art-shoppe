@@ -1,0 +1,31 @@
+.navbar{
+  background: #ff00cc;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+.navbar.scrolled{
+  background: rgba(119, 1, 129, 0.85);
+  transition: background 700ms;
+}
+.navbar-nav .nav-item .nav-link {
+  color: rgba(255,255,255,.8);
+}
+.navbar-nav .nav-item .nav-link:hover {
+  color: rgb(255, 255, 255);
+}
+
+#mainicon{
+
+  animation: iconRotate infinite 5s linear ;
+
+}
+@keyframes iconRotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
